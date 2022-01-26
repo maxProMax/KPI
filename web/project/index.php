@@ -1,5 +1,5 @@
-<?php 
-    include './php/db/connect_to_db.php';
+<?php
+include './php/db/connect_to_db.php';
 ?>
 
 <!DOCTYPE html>
@@ -12,17 +12,18 @@
     <title>Туристична компаниія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/index.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/index.js" async></script>
 </head>
 
 <body>
-    <header>
-        <img src="https://cdn.coraltravel.ua/content/logocoraltravelru-25f77d24.svg" style="width: 200px; height: 100px"
-            alt="Логотип" />
-    </header>
+    <?php include './php/components/header/header.php'; ?>
     <nav class="page-side-nav">
         <ul>
             <li>Головна</li>

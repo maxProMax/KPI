@@ -1,7 +1,7 @@
 html {
     max-width: 100vw;
     overflow-x: hidden;
-    font-family: 'Dongle', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 body {
     background-color: #0093d0;
@@ -16,9 +16,9 @@ body {
 
 header {
     height: 7rem;
-
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 header,
@@ -94,4 +94,8 @@ footer:before {
 
 .footer-countries {
     width: 30rem;
+}
+
+.login-error {
+    color: firebrick;
 }
