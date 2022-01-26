@@ -60,6 +60,7 @@ footer:before {
 
 .page-content {
     margin-bottom: 2rem;
+    width: calc(100% - 10rem);
 }
 
 .page-content_home {
