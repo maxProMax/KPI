@@ -1,9 +1,9 @@
-<?php 
-    include 'php/components/table-title.php';
+<?php
+include 'php/components/table-title.php';
 
-    $conn = get_DB();
+$conn = get_DB();
 
-    $sql = 'SELECT 
+$sql = 'SELECT 
         countries.Name as Country, 
         cities.Name as City, 
         hotels.Name as Hotel, 
@@ -14,10 +14,14 @@
         ON hotels.ContryID = countries.ContryID
         INNER JOIN cities
         ON hotels.CityID = cities.CityID';
-    
-    $result = $conn -> query($sql);
 
-    $table = '<table class="search-result-table">
+if (isset($_POST['country']) && $_POST['country']) {
+    $sql .= " WHERE countries.Name = '{$_POST['country']}'";
+}
+
+$result = $conn->query($sql);
+
+$table = '<table class="search-result-table">
         <thead>
             <tr>
                 <th>Країна</th>
@@ -29,15 +33,14 @@
         </thead>
         <tbody>';
 
-    while($row = $result->fetch_assoc()) {
-        $table .= "<tr>
-            <td>".$row["Country"]."</td>
-            <td>".$row["City"]."</td>
-            <td>".$row["Hotel"]."</td>
-            <td>".$row["Date"]."</td>
-            <td>".$row["Price"]."грн</td>
+while ($row = $result->fetch_assoc()) {
+    $table .= "<tr>
+            <td>" . $row["Country"] . "</td>
+            <td>" . $row["City"] . "</td>
+            <td>" . $row["Hotel"] . "</td>
+            <td>" . $row["Date"] . "</td>
+            <td>" . $row["Price"] . "грн</td>
         </tr>";
-               
-    }
+}
 
-    echo $table."</tbody></table>"; 
+echo $table . "</tbody></table>";

@@ -42,9 +42,10 @@ include './php/db/connect_to_db.php';
                 </p>
             </section>
         </section>
-        <form action="index.php" method="post" class="search-form">
+        <form id="search-cities" method="post" class="search-form">
             <label for="country">Пошук по країні:</label>
             <input type="text" name="country" placeholder="Країна" />
+            <p class="error-msg"></p>
             <button>Пошук</button>
         </form>
     </main>

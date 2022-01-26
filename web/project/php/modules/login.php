@@ -9,7 +9,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
     $username = $_SESSION['name'];
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['username'])) {
     if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE username = ?')) {
         $stmt->bind_param('s', $_POST['username']);
         $stmt->execute();

@@ -2,7 +2,7 @@
     <?php
 
     if ($loginError) {
-        echo '<p class="login-error">Не правильний логін або пароль</p>';
+        echo '<p class="error-msg">Не правильний логін або пароль</p>';
     }
 
     ?>

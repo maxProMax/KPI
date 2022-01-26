@@ -96,6 +96,10 @@ footer:before {
     width: 30rem;
 }
 
-.login-error {
+#search-cities {
+    width: 12rem;
+}
+
+.error-msg {
     color: firebrick;
 }
