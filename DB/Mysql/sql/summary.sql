@@ -1,0 +1,61 @@
+CREATE TABLE summary (
+    ID int NOT NULL AUTO_INCREMENT,
+    PersonID int NOT NULL,
+    SubjectID int NOT NULL,
+    Evaluation int NOT NULL,
+    PRIMARY KEY (ID),
+    FOREIGN KEY (PersonID) REFERENCES students(PersonID),
+    FOREIGN KEY (SubjectID) REFERENCES semester(SubjectID)
+);
+
+-- (1, 'Ivanov I. I.'),
+-- (2, 'Petrov I. I.'),
+-- (3, 'Kozlov I. I.'),
+-- (4, 'Bykov I. I.'),
+-- (5, 'Konev I. I.'),
+-- (6, 'Kotin I. I.'),
+-- (7, 'Sobakin I. I.');
+
+-- (1,"Комп'ютерна дискретна математика"),
+-- (2,'Математичний аналіз),
+-- (3,'Основи програмування'),
+-- (4,'Теорія ймовірностей'),
+-- (5,'Проектування веб-застосувань',);
+
+
+INSERT INTO summary (PersonID, SubjectID, Evaluation) VALUES
+    (1, 1, 42),
+    (1, 2, 69),
+    (1, 3, 87),
+    (1, 4, 99),
+    (1, 5, 76),
+    (2, 1, 32),
+    (2, 2, 65),
+    (2, 3, 37),
+    (2, 4, 69),
+    (2, 5, 86),
+    (3, 1, 32),
+    (3, 2, 65),
+    (3, 3, 37),
+    (3, 4, 79),
+    (3, 5, 96),
+    (4, 1, 62),
+    (4, 2, 49),
+    (4, 3, 97),
+    (4, 4, 90),
+    (4, 5, 76),
+    (5, 1, 32),
+    (5, 2, 54),
+    (5, 3, 76),
+    (5, 4, 23),
+    (5, 5, 54),
+    (6, 1, 76),
+    (6, 2, 14),
+    (6, 3, 47),
+    (6, 4, 64),
+    (6, 5, 64),
+    (7, 1, 82),
+    (7, 2, 77),
+    (7, 3, 44),
+    (7, 4, 67),
+    (7, 5, 76);

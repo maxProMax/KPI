@@ -1,0 +1,96 @@
+html {
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Dongle', sans-serif;
+}
+body {
+    background-color: #0093d0;
+    color: white;
+    margin: 0;
+    max-width: 1280px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    height: 7rem;
+
+    display: flex;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: white;
+    color: #0093d0;
+    position: relative;
+    width: 100%;
+}
+
+header img {
+    display: block;
+}
+
+header:after,
+header:before,
+footer:after,
+footer:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+}
+
+header:after,
+footer:after {
+    right: 100%;
+}
+header:before,
+footer:before {
+    left: 100%;
+}
+
+.page-side-nav {
+    width: 10rem;
+}
+
+.page-content {
+    margin-bottom: 2rem;
+}
+
+.page-content_home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-content-title {
+    width: 100%;
+}
+
+.search-result {
+    flex-grow: 1;
+}
+
+.search-result-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.search-result-table tr {
+    border-bottom: 1px solid;
+}
+
+.search-result-table td,
+.search-result-table th {
+    text-align: left;
+    line-height: 3;
+    padding: 0 1rem;
+}
+
+.footer-countries {
+    width: 30rem;
+}
